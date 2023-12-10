@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { AuthService } from 'src/app/shared/services/auth.service';
+import { LoginService } from 'src/app/shared/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +10,7 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 export class LoginComponent {
 
   formBuilder:FormBuilder = inject(FormBuilder);
-  authSrv:AuthService = inject(AuthService);
+  authSrv:LoginService = inject(LoginService);
 
   loginForm = this.initForm();
   disabledLogin = false;
@@ -19,7 +19,7 @@ export class LoginComponent {
 
   initForm(){
     return this.formBuilder.group({
-      user:['', [Validators.required,Validators.maxLength(50)]],
+      username:['', [Validators.required,Validators.maxLength(50)]],
       password:['', [Validators.required,Validators.maxLength(50)]]
     });
   } 
@@ -33,7 +33,7 @@ export class LoginComponent {
         
         this.disabledLogin = false;
        
-        this.authSrv.logIn(this.loginForm.value.user ?? '', this.loginForm.value.password ?? '').then((res) =>{
+        this.authSrv.logIn(this.loginForm.value).then((res) =>{
           if(!res){
             this.errorLogin = true;
           }

@@ -16,11 +16,11 @@
 
                 <mat-form-field class="full-width">
                   <mat-label>Usuario</mat-label>
-                  <input type="text" matInput placeholder="Ingrese usuario" formControlName="user">
+                  <input type="text" matInput placeholder="Ingrese usuario" formControlName="username">
                   <mat-icon class="icon-color" matSuffix>person</mat-icon>
-                  @if(loginForm.controls.user.invalid && (loginForm.controls.user.dirty || loginForm.controls.user.touched)){
+                  @if(loginForm.controls.username.invalid && (loginForm.controls.username.dirty || loginForm.controls.username.touched)){
                     <mat-error>
-                      @if(loginForm.controls.user.errors?.['required']){
+                      @if(loginForm.controls.username.errors?.['required']){
                         Ingresa un usuario.
                       }
                     </mat-error>

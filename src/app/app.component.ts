@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthService } from './shared/services/auth.service';
+import { LoginService } from './shared/services/login.service';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +8,10 @@ import { AuthService } from './shared/services/auth.service';
 })
 export class AppComponent {
 
-  constructor(private authSrv:AuthService){}
+  constructor(private loginSrv:LoginService){}
 
   isLogged(){
-    return this.authSrv.isLogged;
+    return this.loginSrv.isLogged;
   }
 
   title = 'sales';

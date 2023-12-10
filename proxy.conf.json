@@ -1,0 +1,11 @@
+{
+    "/sales":{
+        "target": "https://localhost:44308",
+        "secure": "false",
+        "logLevel": "debug",
+        "pathRewrite": {
+            "^/sales": ""
+            },
+        "changeOrigin": true
+    }
+}

@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+
+import { ApiModule } from './shared/services/api/api.module'; 
 
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
@@ -24,6 +27,7 @@ import { SidenavMenuComponent } from './shared/components/sidenav-menu/sidenav-m
 import { HomeComponent } from './pages/home/home.component';
 import { SideNavigationMenuComponent } from './shared/components/side-navigation-menu/side-navigation-menu.component';
 import { LoginComponent } from './pages/login/login.component';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -40,6 +44,8 @@ import { LoginComponent } from './pages/login/login.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    ApiModule.forRoot({ rootUrl: environment.urlApi }),
     
     MatButtonModule,
     MatIconModule,
