@@ -1,0 +1,10 @@
+
+@if(isLogged()){
+  <app-toolbar-header class="header"></app-toolbar-header>
+  <app-sidenav-menu class="sidenav">
+    <router-outlet></router-outlet>
+  </app-sidenav-menu>
+}
+@else {
+  <router-outlet></router-outlet>
+}

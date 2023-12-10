@@ -1,0 +1,50 @@
+@import 'src/styles.scss';
+
+.sidenav-container{
+    height: 100%;
+    overflow: hidden;
+    padding-top: 50px;
+}
+
+.sidenav {
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    background-color: $dark-gray;
+    color: white;
+}
+
+.sidenav-content{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.routed-content{
+    flex: 1;
+}
+
+.site-map{
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 12px;
+}
+
+.site-map-item{
+    padding: 1px;
+    color: $gray;
+    font-weight: 500;
+}
+
+.site-map-icon{
+    color: $gray;
+    padding-right: 2px;
+    font-size: 18px;
+    height: auto;
+    width: auto;
+}

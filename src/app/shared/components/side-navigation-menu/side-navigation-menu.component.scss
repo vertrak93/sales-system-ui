@@ -1,0 +1,36 @@
+@import 'src/styles.scss';
+
+.nav-expansion-panel{
+    border-radius: none;
+}
+
+.nav-expansion-panel, .nav-menu-item{
+    background-color: $dark-gray;
+    color: white;
+    font-size: 14px;
+    font-weight:500;
+}
+
+.nav-menu-item{
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu-text{
+    padding-left: 1rem;
+}
+
+.nav-a-menu, .nav-expansion-panel{
+    border-bottom: 1px solid $gray;
+}
+
+.nav-a-menu{
+    padding-left: 1.5rem;
+}
+
+::ng-deep .mat-expansion-indicator::after, 
+.mat-expansion-panel-header-description{
+    color: white !important;
+}
+
+

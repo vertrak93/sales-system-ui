@@ -1,0 +1,16 @@
+<mat-sidenav-container class="sidenav-container">
+
+    <mat-sidenav #sidenav [mode]="mode" class="sidenav" [opened]="sidenavOpened">
+                 <app-side-navigation-menu></app-side-navigation-menu>
+    </mat-sidenav>
+    
+    <mat-sidenav-content class="sidenav-content">
+
+        <div class="routed-content">
+            <ng-content></ng-content>
+        </div>
+        <app-toolbar-footer></app-toolbar-footer>
+
+    </mat-sidenav-content>
+    
+</mat-sidenav-container>

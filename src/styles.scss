@@ -1,0 +1,36 @@
+@import "src/assets/styles/grid.scss";
+
+$primary: #1976d2;
+$accent: #FFA000;
+$warn: #D32F2F;
+
+$ligth-gray: #90A4AE;
+$gray: #455A64;
+$dark-gray: #263238;
+$navi: #304FFE;
+$success: #00E676;
+$yellow: #FFFF00;
+
+
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+}
+
+.flex-align-center-justify-start{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding-bottom: 5px;
+}
+
+.mat-card-title-text{
+	padding-left: 12px;
+	font-size: 18px;
+	font-weight: 500;
+}
